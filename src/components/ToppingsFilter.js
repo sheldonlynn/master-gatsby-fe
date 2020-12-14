@@ -34,12 +34,12 @@ function countPizzasInToppings(pizzas) {
       // check if is an existing topping
       // if so, increment by 1
       // otherwise create new entry in acc and set it to one
-      const existingTopping = acc[topping.id];
+      const existingTopping = acc[topping.name];
       if (existingTopping) {
         // if it is, increment by 1
         existingTopping.count += 1;
       } else {
-        acc[topping.id] = {
+        acc[topping.name] = {
           id: topping.id,
           name: topping.name,
           count: 1,
@@ -80,10 +80,9 @@ export default function ToppingsFilter({ activeTopping }) {
       }
     }
   `);
-  console.clear();
   // count how many pizzas are in each topping
   const toppingsWithCounts = countPizzasInToppings(pizzas.nodes);
-  console.log(toppingsWithCounts);
+
   // loop over list of toppings and display topping and count of pizzas in that toppin
 
   // link it up etc
