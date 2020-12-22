@@ -4,12 +4,10 @@ import styled from 'styled-components';
 import Logo from './Logo';
 
 const NavStyles = styled.nav`
-  margin-bottom: 3rem;
   .logo {
     transform: translateY(-25%);
   }
   ul {
-    margin: 0;
     padding: 0;
     text-align: center;
     list-style: none;
@@ -18,7 +16,7 @@ const NavStyles = styled.nav`
     grid-template-columns: 1fr 1fr auto 1fr 1fr;
     grid-gap: 2rem;
     align-items: center;
-    margin-top: -6rem;
+    margin: -6rem 0 0;
   }
 
   li {

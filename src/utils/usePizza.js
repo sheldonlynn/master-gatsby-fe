@@ -32,7 +32,6 @@ export default function usePizza({ pizzas, values }) {
   // function that is send run when someone submits the form
   async function submitOrder(e) {
     e.preventDefault();
-    console.log(e);
     setLoading(true);
     setError(null);
     setMessage(null);
@@ -45,7 +44,6 @@ export default function usePizza({ pizzas, values }) {
       email: values.email,
       mapleSyrup: values.mapleSyrup,
     };
-    console.log(body);
 
     // send data to a serverless function when they check out
     const res = await fetch(
